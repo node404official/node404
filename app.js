@@ -264,8 +264,168 @@ END OF PUBLIC FILE // CASE_002<br>
 
 wannacry:{
 tag:'CYBER HISTORY / CASE_003',
-title:'WANNACRY',
-html:'<p>Case file queued for evidence review.</p>'
+title:'WANNACRY // VERIFIED CASE FILE',
+html:`
+<div class="casehero"></div>
+<div class="tag">CYBER HISTORY / CASE_003 / DOCUMENTED</div>
+<h2>WANNA<br>CRY</h2>
+
+<p class="lede">On 12 May 2017, WannaCry triggered a major international ransomware outbreak. It encrypted files on vulnerable Windows systems while using worm-like capabilities to spread across networks, disrupting organizations around the world.</p>
+
+<div class="warning">
+NODE404 NOTE // WannaCry is heavily documented by security researchers, governments and affected institutions. Attribution is presented here as an assessment made by named authorities — not as proof independently produced by NODE404.
+</div>
+
+<h4>01 // THE OUTBREAK — MAY 2017</h4>
+
+<p>WannaCry began spreading rapidly on 12 May 2017. Unlike ransomware that depends only on convincing individual users to execute malicious files, WannaCry incorporated network propagation capabilities that allowed it to move between vulnerable Windows systems.</p>
+
+<p>Once a vulnerable machine was compromised, the malware could encrypt files and display a ransom demand while attempting to identify additional systems it could reach.</p>
+
+<div class="evidence">
+<b>DOCUMENTED</b>
+<span>The outbreak became a major international cybersecurity incident and demonstrated how rapidly an unpatched network vulnerability could be exploited at scale.</span>
+</div>
+
+<h4>02 // MS17-010 & ETERNALBLUE</h4>
+
+<p>The outbreak exploited vulnerabilities in Microsoft's implementation of the Server Message Block protocol. The exploit associated with WannaCry became widely known as <b>EternalBlue</b>.</p>
+
+<p>Microsoft had already released security bulletin <b>MS17-010</b> on 14 March 2017, approximately two months before the outbreak, addressing critical SMB vulnerabilities.</p>
+
+<div class="statrow">
+<div><small>14 MAR 2017</small><b>MS17-010</b><span>Microsoft releases security updates addressing critical SMB vulnerabilities</span></div>
+<div><small>12 MAY 2017</small><b>WANNACRY</b><span>Global ransomware outbreak begins</span></div>
+</div>
+
+<h4>03 // WHY IT SPREAD SO FAST</h4>
+
+<p>WannaCry's ability to propagate over networks distinguished the outbreak from many conventional ransomware incidents. Vulnerable machines exposed to infected systems could become additional points of infection without each victim independently opening a malicious attachment.</p>
+
+<div class="truthgrid">
+<div><b>RANSOMWARE</b><p>Files on compromised systems were encrypted and victims were presented with a ransom demand.</p></div>
+
+<div><b>WORM-LIKE SPREAD</b><p>The malware attempted to propagate automatically to additional vulnerable Windows systems.</p></div>
+
+<div><b>SMB</b><p>The outbreak exploited flaws affecting Microsoft's Server Message Block implementation.</p></div>
+
+<div><b>PATCH AVAILABLE</b><p>Microsoft had released MS17-010 before the global outbreak occurred.</p></div>
+</div>
+
+<h4>04 // THE NHS</h4>
+
+<p>One of the most visible consequences occurred in England's National Health Service. The attack disrupted NHS organizations and affected access to systems used in healthcare operations.</p>
+
+<p>The UK's National Audit Office later reported that at least <b>81 of 236 NHS trusts</b> across England were affected by the attack, either through infection or operational disruption. Thousands of appointments and operations were cancelled as organizations responded to the incident.</p>
+
+<div class="evidence">
+<b>REAL-WORLD IMPACT</b>
+<span>WannaCry demonstrated that a cyberattack can create consequences far beyond computers themselves when digital infrastructure supports essential services.</span>
+</div>
+
+<h4>05 // THE KILL SWITCH</h4>
+
+<p>During analysis of the malware, security researcher Marcus Hutchins identified a domain name queried by WannaCry and registered it.</p>
+
+<p>The registration activated behavior commonly described as the malware's <b>kill switch</b>, substantially slowing the spread of the original outbreak. It did not repair machines that had already been infected, and later variants required continued defensive attention.</p>
+
+<div class="warning">
+IMPORTANT // The kill switch did not decrypt infected computers. Its major effect was limiting further propagation of versions of WannaCry that checked the registered domain.
+</div>
+
+<h4>06 // THE SHADOW BROKERS CONNECTION</h4>
+
+<p>The EternalBlue exploit became publicly available after being released by a group calling itself <b>The Shadow Brokers</b>, which had published tools it claimed came from the U.S. National Security Agency.</p>
+
+<p>The public availability of these offensive capabilities became part of the wider debate surrounding vulnerability stockpiling, disclosure and the security consequences of leaked cyber tools.</p>
+
+<h4>07 // ATTRIBUTION</h4>
+
+<p>Later in 2017, multiple governments publicly attributed WannaCry to North Korea. The United Kingdom stated that its assessment linked the attack to the Lazarus Group, which it associated with North Korean actors.</p>
+
+<p>The United States also publicly attributed responsibility for WannaCry to North Korea. Microsoft separately reported that it believed the actor it tracks as <b>ZINC</b>, also known as Lazarus Group, was responsible.</p>
+
+<div class="evidence">
+<b>ATTRIBUTED — NOT INDEPENDENTLY PROVEN BY NODE404</b>
+<span>NODE404 reports these as documented attribution assessments by governments and security organizations. Cyber attribution is an analytical conclusion based on multiple forms of evidence and should be distinguished from direct identification by this archive.</span>
+</div>
+
+<h4>08 // VERIFIED TIMELINE</h4>
+
+<div class="big-timeline">
+
+<div><time>14 MAR 2017</time><p><b>MICROSOFT MS17-010</b><br>Microsoft releases security updates addressing critical SMB vulnerabilities.</p></div>
+
+<div><time>APR 2017</time><p><b>ETERNALBLUE BECOMES PUBLIC</b><br>The Shadow Brokers release a collection containing the EternalBlue exploit.</p></div>
+
+<div><time>12 MAY 2017</time><p><b>GLOBAL OUTBREAK</b><br>WannaCry begins rapidly infecting vulnerable Windows systems across multiple countries and organizations.</p></div>
+
+<div><time>12 MAY 2017</time><p><b>KILL SWITCH ACTIVATED</b><br>Registration of a domain queried by the malware significantly restricts propagation of the original outbreak.</p></div>
+
+<div><time>DEC 2017</time><p><b>PUBLIC ATTRIBUTION</b><br>The United States publicly attributes WannaCry to North Korea; the UK also publicly links the attack to North Korean actors.</p></div>
+
+</div>
+
+<h4>09 // WHAT WANNACRY CHANGED</h4>
+
+<p>WannaCry became a prominent case study in patch management and cybersecurity resilience. A security update existed before the outbreak, but vulnerable systems remained deployed across large networks.</p>
+
+<p>The incident also demonstrated how leaked offensive cyber capabilities could be repurposed for disruptive criminal or state-linked operations once released publicly.</p>
+
+<h4>10 // WHAT WE WILL NOT PRESENT AS FACT</h4>
+
+<ul class="redflags">
+<li>That every Windows computer was vulnerable to WannaCry.</li>
+<li>That paying the ransom guaranteed successful recovery of encrypted files.</li>
+<li>That registering the kill-switch domain decrypted systems that were already infected.</li>
+<li>That the NHS was the only major organization affected.</li>
+<li>That NODE404 independently identified the real-world operators behind WannaCry.</li>
+<li>That government attribution and direct public proof are the same thing.</li>
+</ul>
+
+<h4>11 // CASE STATUS</h4>
+
+<div class="evidence">
+<b>DOCUMENTED // ATTRIBUTION PUBLICLY ASSESSED</b>
+<span>The malware, exploitation technique, global outbreak and major operational effects are extensively documented. Responsibility has been publicly attributed by multiple governments and security organizations, while NODE404 treats those conclusions as attributed assessments rather than independent identification.</span>
+</div>
+
+<h4>12 // SOURCES & EVIDENCE</h4>
+
+<div class="sources">
+
+<a target="_blank" href="https://learn.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010">
+<b>MICROSOFT — MS17-010</b>
+<span>Microsoft security bulletin covering the SMB vulnerabilities patched before the WannaCry outbreak.</span>
+</a>
+
+<a target="_blank" href="https://www.microsoft.com/en-us/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/">
+<b>MICROSOFT SECURITY — WANNACRY</b>
+<span>Microsoft analysis of the WannaCry ransomware outbreak and its worm-like propagation.</span>
+</a>
+
+<a target="_blank" href="https://www.nao.org.uk/reports/investigation-wannacry-cyber-attack-and-the-nhs/">
+<b>UK NATIONAL AUDIT OFFICE — NHS</b>
+<span>Official investigation into the WannaCry attack and its impact on the NHS in England.</span>
+</a>
+
+<a target="_blank" href="https://www.gov.uk/government/news/foreign-office-minister-condemns-north-korean-actor-for-wannacry-attacks">
+<b>UK GOVERNMENT — ATTRIBUTION</b>
+<span>UK government statement attributing WannaCry to the Lazarus Group and linking the actor to North Korea.</span>
+</a>
+
+<a target="_blank" href="https://trumpwhitehouse.archives.gov/briefings-statements/press-briefing-on-the-attribution-of-the-wannacry-malware-attack-to-north-korea-121917/">
+<b>U.S. GOVERNMENT — WANNACRY ATTRIBUTION</b>
+<span>Archived U.S. government briefing publicly attributing the WannaCry attack to North Korea.</span>
+</a>
+
+</div>
+
+<div class="endfile">
+END OF PUBLIC FILE // CASE_003<br>
+<span>PATCH EARLY. VERIFY THE EVIDENCE. STUDY THE FAILURE.</span>
+</div>
+`
 }
 };
 
