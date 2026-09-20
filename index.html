@@ -1,1 +1,214 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NODE404 — Internet Mysteries</title><link rel="stylesheet" href="style.css"></head><body><header><div class="shell"><nav><a class="brand" href="#"><img src="logo.png"><b>NODE404</b></a><a class="navlink" href="#cases">CASES</a><a class="navlink" href="#archive">ARCHIVE</a><a class="navlink" href="#about">ABOUT</a><span class="status">● SYSTEM ONLINE</span></nav></div></header><main class="shell"><div class="hero"><div><div class="eyebrow">// ACCESS LEVEL: PUBLIC</div><h1>THE HIDDEN<br><span>SIDE OF THE</span><br>INTERNET.</h1><p>NODE404 documents internet mysteries, hacktivist movements, cyber history and digital cases that shaped the networked world.</p><div class="buttons"><a class="btn primary" href="#cases">ACCESS FILES</a><button class="btn" onclick="randomCase()">RANDOM CASE</button></div></div><div class="terminal"><div class="termbar">root@node404:~/archive</div><div class="termcontent"><span class="g">$ initializing NODE404 archive...</span><br>[OK] secure channel established<br>[OK] public records mounted<br>[OK] case index loaded<br><br><span class="g">AVAILABLE DIRECTORIES</span><br>./hacktivism<br>./internet_mysteries<br>./cyber_history<br>./dark_web<br><br><span class="g">$ status</span><br>3 records indexed / more incoming<br><br>root@node404:~$ <span class="cursor"></span></div></div></div><section id="cases"><div class="sectionhead"><div><small>// RECENTLY DECLASSIFIED</small><h2>LATEST CASES</h2></div><small>ARCHIVE_001</small></div><div class="grid"><article class="case" data-num="01" onclick="openCase('anonymous')"><span class="tag">HACKTIVISM / CASE_001</span><h3>ANONYMOUS</h3><p>A decentralized identity. No official leader. No fixed membership. One of the internet's most recognizable movements.</p><span class="open">OPEN CASE →</span></article><article class="case" data-num="02" onclick="openCase('cicada')"><span class="tag">MYSTERY / CASE_002</span><h3>CICADA 3301</h3><p>A trail of cryptographic puzzles appeared online. The identity and ultimate purpose behind them remain disputed.</p><span class="open">OPEN CASE →</span></article><article class="case" data-num="03" onclick="openCase('wannacry')"><span class="tag">CYBER HISTORY / CASE_003</span><h3>WANNACRY</h3><p>The 2017 ransomware outbreak spread across networks worldwide and disrupted major organizations.</p><span class="open">OPEN CASE →</span></article></div></section><section id="archive"><div class="sectionhead"><div><small>// QUERY DATABASE</small><h2>SEARCH THE ARCHIVE</h2></div></div><div class="searchbox"><input id="search" placeholder="type a case, event or keyword..."><button onclick="searchArchive()">EXECUTE</button></div><div class="chips"><span class="chip">HACKTIVISM</span><span class="chip">INTERNET MYSTERIES</span><span class="chip">CYBER HISTORY</span><span class="chip">DARK WEB</span><span class="chip">DIGITAL CULTURE</span></div></section><section id="about" class="manifesto"><div class="quote">THE INTERNET HAS A MEMORY.<br><span>WE SEARCH THE PARTS PEOPLE FORGET.</span></div><div><div class="eyebrow">// NODE404 MANIFEST</div><p style="color:#9aac9f;line-height:1.9">An independent archive of documented digital history and internet mysteries. Facts are separated from claims, speculation and folklore. Sources belong with the case file.</p><p class="ascii">01001110 01001111 01000100 01000101 00110100 00110000 00110100<br>THE SIGNAL EXISTS / FIND THE SOURCE / VERIFY EVERYTHING</p></div></section></main><footer><div class="shell">NODE404 // INTERNET MYSTERIES <span style="float:right">EXPLORE WHAT STAYS HIDDEN.</span></div></footer><div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeCase()">×</button><div id="modalContent"></div></div></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NODE404 — Internet Mysteries</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXH4KC9EV8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EXH4KC9EV8');
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="shell">
+    <nav>
+      <a class="brand" href="#">
+        <img src="logo.png">
+        <b>NODE404</b>
+      </a>
+
+      <a class="navlink" href="#cases">CASES</a>
+      <a class="navlink" href="#archive">ARCHIVE</a>
+      <a class="navlink" href="#about">ABOUT</a>
+
+      <span class="status">● SYSTEM ONLINE</span>
+    </nav>
+  </div>
+</header>
+
+<main class="shell">
+
+  <div class="hero">
+
+    <div>
+      <div class="eyebrow">// ACCESS LEVEL: PUBLIC</div>
+
+      <h1>
+        THE HIDDEN<br>
+        <span>SIDE OF THE</span><br>
+        INTERNET.
+      </h1>
+
+      <p>
+        NODE404 documents internet mysteries, hacktivist movements,
+        cyber history and digital cases that shaped the networked world.
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="#cases">ACCESS FILES</a>
+        <button class="btn" onclick="randomCase()">RANDOM CASE</button>
+      </div>
+    </div>
+
+    <div class="terminal">
+      <div class="termbar">root@node404:~/archive</div>
+
+      <div class="termcontent">
+        <span class="g">$ initializing NODE404 archive...</span><br>
+        [OK] secure channel established<br>
+        [OK] public records mounted<br>
+        [OK] case index loaded<br><br>
+
+        <span class="g">AVAILABLE DIRECTORIES</span><br>
+        ./hacktivism<br>
+        ./internet_mysteries<br>
+        ./cyber_history<br>
+        ./dark_web<br><br>
+
+        <span class="g">$ status</span><br>
+        3 records indexed / more incoming<br><br>
+
+        root@node404:~$ <span class="cursor"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <section id="cases">
+
+    <div class="sectionhead">
+      <div>
+        <small>// RECENTLY DECLASSIFIED</small>
+        <h2>LATEST CASES</h2>
+      </div>
+
+      <small>ARCHIVE_001</small>
+    </div>
+
+    <div class="grid">
+
+      <article class="case" data-num="01" onclick="openCase('anonymous')">
+        <span class="tag">HACKTIVISM / CASE_001</span>
+
+        <h3>ANONYMOUS</h3>
+
+        <p>
+          A decentralized identity. No official leader. No fixed membership.
+          One of the internet's most recognizable movements.
+        </p>
+
+        <span class="open">OPEN CASE →</span>
+      </article>
+
+      <article class="case" data-num="02" onclick="openCase('cicada')">
+        <span class="tag">MYSTERY / CASE_002</span>
+
+        <h3>CICADA 3301</h3>
+
+        <p>
+          A trail of cryptographic puzzles appeared online.
+          The identity and ultimate purpose behind them remain disputed.
+        </p>
+
+        <span class="open">OPEN CASE →</span>
+      </article>
+
+      <article class="case" data-num="03" onclick="openCase('wannacry')">
+        <span class="tag">CYBER HISTORY / CASE_003</span>
+
+        <h3>WANNACRY</h3>
+
+        <p>
+          The 2017 ransomware outbreak spread across networks worldwide
+          and disrupted major organizations.
+        </p>
+
+        <span class="open">OPEN CASE →</span>
+      </article>
+
+    </div>
+
+  </section>
+
+  <section id="archive">
+
+    <div class="sectionhead">
+      <div>
+        <small>// QUERY DATABASE</small>
+        <h2>SEARCH THE ARCHIVE</h2>
+      </div>
+    </div>
+
+    <div class="searchbox">
+      <input id="search" placeholder="type a case, event or keyword...">
+      <button onclick="searchArchive()">EXECUTE</button>
+    </div>
+
+    <div class="chips">
+      <span class="chip">HACKTIVISM</span>
+      <span class="chip">INTERNET MYSTERIES</span>
+      <span class="chip">CYBER HISTORY</span>
+      <span class="chip">DARK WEB</span>
+      <span class="chip">DIGITAL CULTURE</span>
+    </div>
+
+  </section>
+
+  <section id="about" class="manifesto">
+
+    <div class="quote">
+      THE INTERNET HAS A MEMORY.<br>
+      <span>WE SEARCH THE PARTS PEOPLE FORGET.</span>
+    </div>
+
+    <div>
+      <div class="eyebrow">// NODE404 MANIFEST</div>
+
+      <p style="color:#9aac9f;line-height:1.9">
+        An independent archive of documented digital history and internet
+        mysteries. Facts are separated from claims, speculation and folklore.
+        Sources belong with the case file.
+      </p>
+
+      <p class="ascii">
+        01001110 01001111 01000100 01000101 00110100 00110000 00110100<br>
+        THE SIGNAL EXISTS / FIND THE SOURCE / VERIFY EVERYTHING
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <div class="shell">
+    NODE404 // INTERNET MYSTERIES
+    <span style="float:right">EXPLORE WHAT STAYS HIDDEN.</span>
+  </div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modalbox">
+
+    <button class="close" onclick="closeCase()">×</button>
+
+    <div id="modalContent"></div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
